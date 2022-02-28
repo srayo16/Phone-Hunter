@@ -11,12 +11,12 @@ let btn = () =>{
 }
 
 let searchresult = datas =>{
-    console.log(datas);
+    // console.log(datas);
     let searchresult = document.getElementById('searcharea');
     searchresult.textContent = '';
     // new element
     datas.forEach(data =>{
-        console.log(data);
+        // console.log(data);
     let div = document.createElement('div');
     div.classList.add('col');
     div.innerHTML = `
@@ -25,11 +25,24 @@ let searchresult = datas =>{
       <div class="card-body">
         <h5 class="card-title">${data.phone_name}</h5>
         <p class="card-text">${data.brand}</p>
+        <button class="btn btn-primary" onclick="IDphone('${data.slug}')" type="submit">Details</button>
       </div>
     </div>
   `;
     searchresult.appendChild(div);
-})
-    
-  
+}) 
 }
+
+// btn part done
+
+// details tap start
+let IDphone = detail =>{
+    let url = `https://openapi.programming-hero.com/api/phone/${detail}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => showDetails(data.data))
+}
+
+let showDetails = phone => {
+    console.log(phone);
+} 
