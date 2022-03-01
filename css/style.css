@@ -13,7 +13,10 @@
 #warAlert{
     display: none;
 }
-
+/* data empty */
+#noData{
+    display: none;
+}
 /* spin */
 
 #spin{

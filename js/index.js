@@ -9,6 +9,7 @@
     let inputReal = input.value;
     if(input.value === '' ){
       document.getElementById('warAlert').style.display = "block";
+      document.getElementById('noData').style.display = 'none';
       document.getElementById('spin').style.display = 'none';
     }
     else{
@@ -30,7 +31,7 @@
 
     if(datas.length == 0 ){
       document.getElementById('spin').style.display = 'none';
-      alert('Sorry! could not find any data');
+      document.getElementById('noData').style.display = 'block';
     }
 
     else{
@@ -54,7 +55,7 @@
     }
  }
 
- // btn part done
+ // btn part end
 
  // details tap start
  let IDphone = detail =>{
@@ -78,7 +79,7 @@
       <div class="card-body">
         <h5 class="card-title">${phone.name}</h5>
         <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Not available!'} </p>
-        <p class="card-text">Main features: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br> ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br> ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
+        <p class="card-text">Main features: Chipset: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br>Display Size: ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br>Memory: ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
         <p class="card-text">Sensors: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors: 'Not available!' }</p>
         <p class="card-text">Others: Not available!</p>
         </div>
@@ -91,9 +92,9 @@
     <div class="card-body">
       <h5 class="card-title">${phone.name}</h5>
       <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Not available!'} </p>
-      <p class="card-text">Main features: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br> ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br> ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
+      <p class="card-text">Main features: Chipset: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br>Display Size: ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br>Memory: ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
       <p class="card-text">Sensors: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors: 'Not available!' }</p>
-          <p class="card-text">Others: ${phone.others.Bluetooth ? phone.others.Bluetooth: 'Not available!' } , ${phone.others.GPS ? phone.others.GPS: 'Not available!' } , ${phone.others.NFC ? phone.others.NFC: 'Not available!' } , ${phone.others.Radio ? phone.others.Radio: 'Not available!' } , ${phone.others.USB ? phone.others.USB: 'Not available!' } , ${phone.others.WLAN ? phone.others.WLAN: 'Not available!' }</p>
+          <p class="card-text">Others: Bluetooth: ${phone.others.Bluetooth ? phone.others.Bluetooth: 'Not available!' } , GPS: ${phone.others.GPS ? phone.others.GPS: 'Not available!' } , NFC: ${phone.others.NFC ? phone.others.NFC: 'Not available!' } , Radio: ${phone.others.Radio ? phone.others.Radio: 'Not available!' } , USB: ${phone.others.USB ? phone.others.USB: 'Not available!' } , WLAN: ${phone.others.WLAN ? phone.others.WLAN: 'Not available!' }</p>
       </div>
       </div>`;
     }
@@ -101,4 +102,4 @@
  } 
 
 
-// details tap done
+// details tap end
