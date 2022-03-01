@@ -14,6 +14,7 @@
     }
     else{
     document.getElementById('warAlert').style.display = "none";
+    document.getElementById('noData').style.display = 'none';
     let url = `https://openapi.programming-hero.com/api/phones?search=${inputReal}`;
     fetch(url)
     .then(res=>res.json())
@@ -24,6 +25,7 @@
    
  let searchresult = datas =>{
     document.getElementById('spin').style.display = 'none';
+    document.getElementById('noData').style.display = 'none';
     let searchresult = document.getElementById('searcharea');
     searchresult.textContent = '';
     ;
@@ -36,6 +38,7 @@
 
     else{
       document.getElementById('spin').style.display = 'none';
+      document.getElementById('noData').style.display = 'none';
       datas.forEach(data =>{
         let div = document.createElement('div');
         div.classList.add('col');
@@ -61,6 +64,7 @@
  let IDphone = detail =>{
   document.getElementById('spin').style.display = 'block';
   document.getElementById('warAlert').style.display = "none";
+  document.getElementById('noData').style.display = 'none';
     let url = `https://openapi.programming-hero.com/api/phone/${detail}`;
     fetch(url)
     .then(res => res.json())
@@ -69,6 +73,7 @@
 
  let showDetails = phone => {
   document.getElementById('spin').style.display = 'none';
+  document.getElementById('noData').style.display = 'none';
     let searchShow = document.getElementById('searchshow');
     searchShow.textContent = '';
     let div = document.createElement('div');
