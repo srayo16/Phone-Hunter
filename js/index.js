@@ -78,7 +78,7 @@
       <img src="${phone.image}" class="card-img-top" alt="">
       <div class="card-body">
         <h5 class="card-title">${phone.name}</h5>
-        <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Not available!'} </p>
+        <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Coming soon'} </p>
         <p class="card-text">Main features: Chipset: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br>Display Size: ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br>Memory: ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
         <p class="card-text">Sensors: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors: 'Not available!' }</p>
         <p class="card-text">Others: Not available!</p>
@@ -91,7 +91,7 @@
     <img src="${phone.image}" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">${phone.name}</h5>
-      <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Not available!'} </p>
+      <p class="card-text">Realease Date: ${phone.releaseDate ? phone.releaseDate: 'Coming soon'} </p>
       <p class="card-text">Main features: Chipset: ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet: 'Not available!'} <br>Display Size: ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize: 'Not available!' } <br>Memory: ${phone.mainFeatures.memory ? phone.mainFeatures.memory: 'Not available!' } </p>
       <p class="card-text">Sensors: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors: 'Not available!' }</p>
           <p class="card-text">Others: Bluetooth: ${phone.others.Bluetooth ? phone.others.Bluetooth: 'Not available!' } , GPS: ${phone.others.GPS ? phone.others.GPS: 'Not available!' } , NFC: ${phone.others.NFC ? phone.others.NFC: 'Not available!' } , Radio: ${phone.others.Radio ? phone.others.Radio: 'Not available!' } , USB: ${phone.others.USB ? phone.others.USB: 'Not available!' } , WLAN: ${phone.others.WLAN ? phone.others.WLAN: 'Not available!' }</p>

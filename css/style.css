@@ -1,3 +1,8 @@
+/* Using font */
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    
 /* results detail */
 .position{
     justify-content: center;
