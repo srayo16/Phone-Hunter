@@ -1,3 +1,4 @@
+/* results detail */
 .position{
     justify-content: center;
 }
@@ -7,3 +8,8 @@
         justify-content: center !important;
     }
   }
+
+/* waring alert */
+#warAlert{
+    display: none;
+}

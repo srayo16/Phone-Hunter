@@ -1,16 +1,24 @@
-// btn part
-
-let btn = () =>{
+ // btn part
+ 
+ let btn = () =>{
     let input = document.getElementById('input-feild');
     let inputReal = input.value;
-    input.value = '';
+    
+    if(input.value === '' ){
+      // alert('Please vai!');
+      document.getElementById('warAlert').style.display = "block";
+    }
+    else{
+      document.getElementById('warAlert').style.display = "none";
     let url = `https://openapi.programming-hero.com/api/phones?search=${inputReal}`;
     fetch(url)
     .then(res=>res.json())
     .then(data => searchresult(data.data))
-}
-
-let searchresult = datas =>{
+    input.value = '';
+    }
+ }
+ 
+ let searchresult = datas =>{
     // console.log(datas);
     let searchresult = document.getElementById('searcharea');
     searchresult.textContent = '';
@@ -30,20 +38,20 @@ let searchresult = datas =>{
     </div>
   `;
     searchresult.appendChild(div);
-}) 
-}
+ }) 
+ }
 
-// btn part done
+ // btn part done
 
-// details tap start
-let IDphone = detail =>{
+ // details tap start
+ let IDphone = detail =>{
     let url = `https://openapi.programming-hero.com/api/phone/${detail}`;
     fetch(url)
     .then(res => res.json())
     .then(data => showDetails(data.data))
 }
 
-let showDetails = phones => {
+ let showDetails = phones => {
     console.log(phones);
     let searchShow = document.getElementById('searchshow');
     searchShow.textContent = '';
@@ -63,4 +71,4 @@ let showDetails = phones => {
   </div>`;
   searchShow.appendChild(div);
     // })
-} 
+ } 
