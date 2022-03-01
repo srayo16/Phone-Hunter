@@ -2,6 +2,7 @@
  
  let btn = () =>{
   document.getElementById('spin').style.display = 'block';
+  document.getElementById('invite').style.display = 'none';
    let remove = document.getElementById('searchshow');
    remove.textContent = '';
     let input = document.getElementById('input-feild');
